@@ -1,0 +1,18 @@
+h1 {
+    text-align: center;
+}
+
+#board {
+    width: 640px;
+    height: 640px;
+}
+.square {
+    height: 60px;
+}
+
+.dark {
+    background-color: darkgray;
+}
+.light {
+    background-color: ghostwhite;
+}
