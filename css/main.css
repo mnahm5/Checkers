@@ -10,9 +10,35 @@ h1 {
     height: 60px;
 }
 
+.btn-circle {
+    width: 70%;
+    height: 40%;
+    margin-top: 40%;
+    margin-left: 15%;
+    border-radius: 50%;
+}
+
+.red {
+    background-color: red;
+    border: 2px solid darkred;
+    box-shadow: 0px 5px 1px red;
+}
+.black {
+    background-color: black;
+    border: 2px solid #740000;
+    box-shadow: 0px 5px 1px black;
+}
+
 .dark {
     background-color: darkgray;
 }
 .light {
     background-color: ghostwhite;
+}
+
+.selected {
+    background-color: deepskyblue;
+}
+.possible_move {
+    background-color: green;
 }

@@ -1,19 +1,36 @@
-var piece = function(color, owner) {
-    this.color = color;
-    this.owner = owner;
-    if (this.owner == 'user') {
-        this.side = 'bottom';
+var piece = function(piece_color, piece_owner) {
+    var color, owner, side, type;
+    color = piece_color;
+    owner = piece_owner;
+    if (owner == 'user') {
+        side = 'bottom';
     }
     else {
-        this.side = 'top';
+        side = 'top';
     }
-    this.type = 'man';
+    type = 'man';
+
+    this.find_owner = function() {
+        return owner;
+    };
+
+    this.find_color = function() {
+        return color;
+    };
+
+    this.find_side = function() {
+        return side;
+    };
+
+    this.find_type = function() {
+        return type;
+    };
 
     this.find_possible_moves = function() {
-        if (this.type == 'man' && this.side == 'top') {
+        if (type == 'man' && side == 'top') {
             return [9,11];
         }
-        else if (this.type == 'man' && this.side == 'bottom') {
+        else if (type == 'man' && side == 'bottom') {
             return [-9,-11];
         }
         else {
@@ -22,7 +39,7 @@ var piece = function(color, owner) {
     };
 
     this.promote = function() {
-        this.type = 'king';
+        type = 'king';
     };
 };
 
